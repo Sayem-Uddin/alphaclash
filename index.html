@@ -7,10 +7,11 @@
 
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://kit.fontawesome.com/4f4914e970.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body class=" ">
-  <main class=" min-h-screen home bg-[#1E1E1E] anton-regular bg-[url(images/background.png)] bg-no-repeat bg-center ">
+  <main class="  min-h-screen home bg-[#1E1E1E] anton-regular bg-[url(images/background.png)] bg-no-repeat bg-center ">
     <!-- ----------- start section-------------- -->
     <section id="start-game" class=" home min-h-screen flex flex-col justify-center items-center text-white  ">
        <div class=" flex flex-col  justify-center items-center gap-12">
@@ -64,21 +65,22 @@
       </div>
       <div class="  w-3/4 flex justify-between inter text-xl">
         <button class="btn bg-[#894189] text-white rounded-full px-8">
-          Life <span></span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+          Life <i class="fa-solid fa-heart-pulse"></i>
+          <span id="current-life">10</span>
+          
         </button>
-        <button class="btn bg-[#360490] text-white rounded-full px-8">
-          Score <span></span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+        <button  class="btn bg-[#360490] text-white rounded-full px-8">
+          Score <i class="fa-solid fa-dollar-sign"></i>
+          <span id="current-score">0</span>
         </button>
       </div>
 
     </section>
     <!-- -------------score section -->
-    <section class="score flex justify-center items-center hidden">
+    <section id="score" class=" flex justify-center items-center">
       <div class="mt-[300px] flex flex-col justify-center items-center gap-4 bg-[#ffffff33] py-10 px-14 rounded-xl ">
-        <h1 class="text-6xl text-white poppins-medium">Score:14</h1>
-        <button  class="btn text-black poppins-semibold text-xl bg-[white] hidden">Play Again</button>
+        <h1 class="text-6xl text-white poppins-medium">Score: <span id="final-score">0</span></h1>
+        <button onclick="play()"  class="btn text-black poppins-semibold text-xl bg-[white] ">Play Again</button>
         <p class=" text-white poppins-medium text-xl">Practice will make you Pro</p>
       </div>
         
